@@ -1,0 +1,47 @@
+--Create a snoball item database
+
+CREATE TABLE snoball (id INTEGER PRIMARY KEY, item TEXT, size TEXT, stuffed TEXT, topped TEXT, togo TEXT, price INTEGER);
+
+insert into snoball VALUES
+(1,"cheesecake", "small" , "yes", "no", "yes", "3.00");
+insert into snoball VALUES 
+(2,"clear starwberry", "small" , "no","no", "yes", "3.00");
+insert into snoball VALUES
+(3,"coconut", "small" , "yes", "yes", "yes", "3.00");
+insert into snoball VALUES
+(4,"pina coloda", "medium" , "yes", "no", "yes", "3.50");
+insert into snoball VALUES
+(5,"clear bubble", "large" , "yes", "no", "yes", "4.00");
+insert into snoball VALUES
+(6,"silver fox", "small" , "yes", "no", "yes", "3.00");
+insert into snoball VALUES
+(7,"wedding", "kiddie" , "yes", "no", "yes", "2.50");
+insert into snoball VALUES
+(8,"banana", "large" , "yes", "no", "no", "4.00");
+insert into snoball VALUES
+(9,"cake batter", "kiddie" , "yes", "no", "yes", "2.50");
+insert into snoball VALUES
+(10,"birthday", "large" , "yes", "no", "yes", "4.00");
+insert into snoball VALUES
+(11,"pineapple", "small" , "yes", "yes", "yes", "3.00");
+insert into snoball VALUES
+(12,"ice cream", "medium" , "no", "no", "no", "3.50");
+insert into snoball VALUES
+(13,"dream", "large" , "yes", "yes", "yes", "4.00");
+insert into snoball VALUES
+(14,"polar", "medium" , "yes", "no", "yes", "3.50");
+insert into snoball VALUES
+(15,"blue coconut", "kiddie" , "yes", "no", "yes", "2.50");
+SELECT * FROM snoball
+order by price desc;
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc;
+
+
+-what are the most 10 popular items?
+SELECT item, price, size
+FROM snoball
+order by price desc
+limit 10;
